@@ -1,0 +1,6 @@
+@EShopDK_HostAddress = http://localhost:5185
+
+GET {{EShopDK_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
