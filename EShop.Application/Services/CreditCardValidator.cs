@@ -5,10 +5,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using EShop.Application.Models;
+using EShop.Application.Services;
 
 namespace EShop.Application.Services;
 
-public class CreditCardValidator
+public class CreditCardValidator : ICreditCardService
 {
     public ValidationResult Validate(string cardNumber)
     {
