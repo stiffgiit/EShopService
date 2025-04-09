@@ -1,4 +1,6 @@
+using EShop.Domain.Repositories;
 using EShop.Application.Services;
+using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICreditCardService, CreditCardValidator>();
 
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseInMemoryDatabase("EShopDB"));
 
 var app = builder.Build();
 
