@@ -17,6 +17,13 @@ builder.Services.AddScoped<ICreditCardService, CreditCardValidator>();
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseInMemoryDatabase("EShopDB"));
 
+
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IRepository, Repository>();
+
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
