@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace EShopDK.Models
+namespace EShop.Domain.Models
 {
     public class Product : BaseModel
     {
@@ -17,7 +17,7 @@ namespace EShopDK.Models
 
         public string? Sku { get; set; }
 
-        public EShopDK.Models.Category? Category { get; set; }
+        public EShop.Domain.Models.Category? Category { get; set; }
 
         public bool Deleted { get; set; }
 

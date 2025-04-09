@@ -1,4 +1,4 @@
-﻿namespace EShopDK.Models
+﻿namespace EShop.Domain.Models
 {
     public class BaseModel
     {

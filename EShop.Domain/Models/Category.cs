@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Components.Web;
-
-namespace EShopDK.Models
+﻿namespace EShop.Domain.Models
 {
     public class Category : BaseModel
     {
