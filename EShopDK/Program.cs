@@ -1,5 +1,6 @@
 using EShop.Domain.Repositories;
 using EShop.Application.Services;
+using EShop.Domain.Seeders;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -24,6 +25,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<DataContext>();
+    EShopSeeder.Seed(context);
+}
+
 
 app.UseHttpsRedirection();
 
